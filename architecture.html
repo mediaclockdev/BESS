@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Architecture | PRDC — Primus Data Centres</title>
+    <meta
+      name="description"
+      content="PRDC data centre design architecture — hybrid and distributed facilities, high-density compute, liquid cooling, modular scale and resilience beyond traditional redundancy."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap nav__in">
+        <a class="logo" href="index.html">
+          <span class="logo__mark"></span>
+          <span class="logo__txt">PRIMUS<span>DATA CENTRES</span></span>
+        </a>
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="architecture.html" aria-current="page">Architecture</a>
+            </li>
+            <li><a href="energy-storage.html">Energy Storage</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button
+          class="burger"
+          data-burger
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="pagehead">
+      <img
+        src="https://images.unsplash.com/photo-1488229297570-58520851e868?auto=format&fit=crop&w=2000&q=75"
+        alt="Structural ceiling of a data centre facility"
+      />
+      <div class="wrap">
+        <p class="crumbs"><a href="index.html">Home</a> — Architecture</p>
+        <h1>Design architecture</h1>
+        <p>
+          Modern facilities are shifting from static, hardware-centric buildings
+          toward flexible, software-defined, energy-aware infrastructure. Our
+          designs follow that shift.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--sm">
+      <div class="wrap">
+        <p class="statement statement--center reveal" style="max-width: 30ch">
+          Power, cooling, network, compute, storage, security and observability
+          are designed as one operating system for the facility.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="wrap split reveal">
+        <div class="split__media">
+          <img
+            src="https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?auto=format&fit=crop&w=1200&q=75"
+            alt="Racks in a contained cold aisle"
+          />
+        </div>
+        <div>
+          <span class="eyebrow">Our approach</span>
+          <h2>Integration is the point.</h2>
+          <p>
+            The strongest designs combine resilient physical systems, automated
+            operations, efficient cooling, dense compute support, and security
+            controls that span both digital and physical layers.
+          </p>
+          <ul class="ticks">
+            <li>Hybrid and distributed architectures</li>
+            <li>High-density compute for AI and accelerated workloads</li>
+            <li>Liquid cooling and advanced thermal management</li>
+            <li>Energy efficiency and sustainability</li>
+            <li>Maximised water utilisation efficiency</li>
+            <li>Modular and scalable facility design</li>
+            <li>Resilience beyond traditional redundancy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div
+          class="reveal"
+          style="max-width: 26ch; margin-bottom: clamp(40px, 5vw, 70px)"
+        >
+          <span class="eyebrow">Design pillars</span>
+          <div class="rule"></div>
+          <h2>What each layer has to deliver.</h2>
+        </div>
+        <div class="grid reveal">
+          <div class="cell">
+            <span class="cell__no">01 — Efficiency</span>
+            <h3>Measured properly</h3>
+            <p>
+              Power usage effectiveness still matters, but a modern
+              sustainability program also accounts for water consumption, carbon
+              intensity, equipment lifecycle, renewable sourcing, heat reuse,
+              and embodied carbon in construction materials.
+            </p>
+          </div>
+          <div class="cell">
+            <span class="cell__no">02 — Waste</span>
+            <h3>Designed out</h3>
+            <p>
+              Modular electrical systems, variable-speed cooling, improved
+              airflow containment, battery energy storage, smarter workload
+              scheduling and detailed metering — reducing waste without giving
+              up resilience.
+            </p>
+          </div>
+          <div class="cell">
+            <span class="cell__no">03 — Resilience</span>
+            <h3>Beyond redundancy</h3>
+            <p>
+              N+1 and 2N remain important. Resilience now also means software
+              failover, multi-site replication, cyber recovery, supply chain
+              planning, operational drills and dependency mapping.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="wrap split split--text-first reveal">
+        <div class="split__media">
+          <img
+            src="https://images.unsplash.com/photo-1682559736721-c2e77ff4c650?auto=format&fit=crop&w=1200&q=75"
+            alt="Network cabling inside an equipment cabinet"
+          />
+        </div>
+        <div>
+          <span class="eyebrow">Edge sites</span>
+          <h2>Designed for when nobody is on site.</h2>
+          <p>
+            Edge facilities place compute closer to users, sensors, industrial
+            systems, retail sites, telecom networks and autonomous systems.
+            Their designs prioritise compactness, remote management,
+            ruggedisation and fast replacement.
+          </p>
+          <ul class="ticks">
+            <li>Remote observability across facility and IT layers</li>
+            <li>Standardised spares held to a common bill of materials</li>
+            <li>Tamper detection on enclosures and access points</li>
+            <li>Automated provisioning for rapid replacement</li>
+            <li>Out-of-band management independent of the primary path</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="wrap">
+        <div
+          class="reveal"
+          style="max-width: 28ch; margin-bottom: clamp(36px, 4.5vw, 60px)"
+        >
+          <span class="eyebrow eyebrow--light"
+            >Recommended design principles</span
+          >
+          <div class="rule rule--light"></div>
+          <h2>Six rules we hold ourselves to.</h2>
+        </div>
+        <dl class="spec reveal">
+          <div class="spec__row">
+            <dt>Mixed densities</dt>
+            <dd>
+              Design for a range of rack profiles rather than assuming one
+              uniform density across the hall.
+            </dd>
+          </div>
+          <div class="spec__row">
+            <dt>Shared telemetry</dt>
+            <dd>
+              Make power and cooling telemetry visible to both facilities and IT
+              operations teams — one view, not two.
+            </dd>
+          </div>
+          <div class="spec__row">
+            <dt>Repeatable modules</dt>
+            <dd>
+              Standardise modules for speed, but keep enough flexibility to
+              absorb new accelerator and cooling requirements.
+            </dd>
+          </div>
+          <div class="spec__row">
+            <dt>Core requirements</dt>
+            <dd>
+              Treat automation, observability and security as core design
+              requirements — not optional management layers added later.
+            </dd>
+          </div>
+          <div class="spec__row">
+            <dt>Measurable sustainability</dt>
+            <dd>
+              Set targets for energy, water, carbon and hardware lifecycle that
+              can actually be reported against.
+            </dd>
+          </div>
+          <div class="spec__row">
+            <dt>Tested resilience</dt>
+            <dd>
+              Exercise resilience across people, processes, software, networks
+              and facility systems — not just the switchgear.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="pull">
+      <div class="wrap reveal">
+        <p>
+          Our facilities are aligned to the business and workload requirements
+          of our customers.
+        </p>
+        <cite>Conclusion — PRDC design architecture</cite>
+      </div>
+    </section>
+
+    <section class="cta">
+      <img
+        src="https://images.unsplash.com/photo-1561233835-f937539b95b9?auto=format&fit=crop&w=1800&q=70"
+        alt=""
+      />
+      <div class="wrap cta__in">
+        <p>Bring us your rack counts, power draw and growth curve.</p>
+        <a class="btn btn--light" href="contact.html">Contact us</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div>
+            <a class="logo" href="index.html">
+              <span class="logo__mark"></span>
+              <span class="logo__txt">PRIMUS<span>DATA CENTRES</span></span>
+            </a>
+            <p>
+              AI-ready, water-conscious data centre campuses developed and
+              operated in Victoria, Australia.
+            </p>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="index.html">Home</a>
+            <a href="architecture.html">Architecture</a>
+            <a href="energy-storage.html">Energy Storage</a>
+            <a href="sustainability.html">Sustainability</a>
+          </div>
+          <div>
+            <h4>Capability</h4>
+            <a href="architecture.html">High-density compute</a>
+            <a href="architecture.html">Liquid cooling</a>
+            <a href="energy-storage.html">Grid services</a>
+            <a href="sustainability.html">Recycled water</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="tel:0390214400">03 9021 4400</a>
+            <a href="mailto:enquiries@prdc.com.au">enquiries@prdc.com.au</a>
+            <a href="contact.html">Melbourne, Victoria</a>
+          </div>
+        </div>
+        <div class="footer__bar">
+          <span>© 2026 Primus Data Centres</span>
+          <span>Privacy · Terms</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script/main.js"></script>
+  </body>
+</html>
