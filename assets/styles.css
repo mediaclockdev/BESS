@@ -31,12 +31,15 @@
   --fs-body: 1.0625rem;
   --fs-small: 0.9rem;
   --fs-micro: 0.72rem;
-
   --display: "Manrope", -apple-system, "Segoe UI", sans-serif;
   --text: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
 
   --wrap: 1260px;
-  --tile-lift: clamp(64px, 7vw, 110px); /* how far the cards sit over the hero */
+  --tile-lift: clamp(
+    64px,
+    7vw,
+    110px
+  ); /* how far the cards sit over the hero */
   --gutter: 5vw;
 }
 
@@ -74,7 +77,7 @@ h4 {
   font-family: var(--display);
   color: var(--ink);
   margin: 0 0 0.6em;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.13;
   letter-spacing: -0.022em;
 }
@@ -125,7 +128,7 @@ p:last-child {
 /* ---------- Text bits ---------- */
 .eyebrow {
   font-family: var(--display);
-  font-size: var(--fs-micro);
+  font-size: var(--fs-small);
   font-weight: 700;
   letter-spacing: 0.26em;
   text-transform: uppercase;
@@ -147,7 +150,7 @@ p:last-child {
 }
 .statement {
   font-family: var(--display);
-  font-weight: 250;
+  font-weight: 400;
   font-size: var(--fs-statement);
   line-height: 1.4;
   color: var(--ink);
@@ -426,7 +429,11 @@ p:last-child {
   min-height: 100svh;
   display: flex;
   align-items: flex-end;
-  padding-top: clamp(140px, 16vh, 190px); /* floor: clears the fixed nav on short windows */
+  padding-top: clamp(
+    140px,
+    16vh,
+    190px
+  ); /* floor: clears the fixed nav on short windows */
   padding-bottom: calc(clamp(56px, 8vh, 96px) + var(--tile-lift));
   overflow: hidden;
   isolation: isolate;
@@ -472,7 +479,7 @@ p:last-child {
 .hero h1 {
   color: #fff;
   font-size: var(--fs-hero);
-  font-weight: 200;
+  font-weight: 300;
   max-width: 15ch;
   margin-bottom: 0.55em;
 }
@@ -588,7 +595,7 @@ p:last-child {
 .split__badge b {
   display: block;
   font-family: var(--display);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   line-height: 1;
   letter-spacing: -0.03em;
@@ -690,7 +697,7 @@ p:last-child {
 }
 .wue__val {
   font-family: var(--display);
-  font-weight: 200;
+  font-weight: 300;
   font-size: clamp(2rem, 3.6vw, 3.2rem);
   color: #fff;
   letter-spacing: -0.04em;
@@ -739,7 +746,7 @@ p:last-child {
 .stat b {
   display: block;
   font-family: var(--display);
-  font-weight: 200;
+  font-weight: 300;
   font-size: clamp(2rem, 3.4vw, 3rem);
   color: #fff;
   letter-spacing: -0.04em;
@@ -834,7 +841,7 @@ p:last-child {
 }
 .cell__no {
   font-family: var(--display);
-  font-size: var(--fs-micro);
+  font-size: var(--fs-small);
   font-weight: 700;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -846,7 +853,7 @@ p:last-child {
   margin-bottom: 0.6em;
 }
 .cell p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 /* ---------- Forms ---------- */
@@ -926,7 +933,7 @@ p:last-child {
 }
 .pagehead h1 {
   color: #fff;
-  font-weight: 200;
+  font-weight: 300;
   max-width: 17ch;
   margin-bottom: 0.5em;
 }
@@ -958,7 +965,7 @@ p:last-child {
 }
 .pull p {
   font-family: var(--display);
-  font-weight: 250;
+  font-weight: 400;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   line-height: 1.32;
   letter-spacing: -0.025em;
@@ -1007,7 +1014,7 @@ p:last-child {
 }
 .cta p {
   font-family: var(--display);
-  font-weight: 250;
+  font-weight: 400;
   font-size: clamp(1.4rem, 2.5vw, 2.1rem);
   line-height: 1.35;
   color: #fff;
@@ -1113,7 +1120,7 @@ p:last-child {
   .menu.open a {
     color: #fff !important;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.02em;
     padding: 14px 0;
     border: none !important;
