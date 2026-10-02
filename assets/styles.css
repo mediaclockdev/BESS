@@ -572,6 +572,9 @@ p:last-child {
 .split--text-first .split__media {
   order: 2;
 }
+.split--top {
+  align-items: start;
+}
 .split__media {
   position: relative;
 }
@@ -608,6 +611,20 @@ p:last-child {
   color: #cfe2fa;
   display: block;
   margin-top: 8px;
+}
+
+@media (min-width: 1081px) {
+  /* image fills the text column's height instead of a fixed 4:3 box */
+  .split__media {
+    align-self: stretch;
+    min-height: 360px;
+  }
+  .split__media img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    aspect-ratio: auto;
+  }
 }
 
 /* ---------- Value columns ---------- */
@@ -771,12 +788,13 @@ p:last-child {
   position: relative;
   padding: 0 0 16px 32px;
   font-size: 1rem;
+  line-height: 28px; /* whole-pixel rows so every dash lands on the pixel grid */
 }
 .ticks li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.82em;
+  top: 14px;
   width: 14px;
   height: 1px;
   background: var(--blue-600);
@@ -859,6 +877,9 @@ p:last-child {
 /* ---------- Forms ---------- */
 .form {
   max-width: 640px;
+  border: 1px solid var(--line);
+  padding: clamp(24px, 3vw, 40px);
+  background: var(--paper);
 }
 .field {
   margin-bottom: 26px;
@@ -873,13 +894,16 @@ p:last-child {
   color: var(--ink);
   margin-bottom: 10px;
 }
+.field:has([required]) label::after {
+  content: " *";
+  color: var(--blue-600);
+}
 .field input,
 .field select,
 .field textarea {
   width: 100%;
-  padding: 14px 0;
-  border: none;
-  border-bottom: 1px solid var(--line);
+  padding: 13px 16px;
+  border: 1px solid #c9d6e4;
   font: inherit;
   font-size: 1rem;
   color: var(--ink);
@@ -893,7 +917,17 @@ p:last-child {
 .field select:focus,
 .field textarea:focus {
   outline: none;
-  border-bottom-color: var(--blue-600);
+  border-color: var(--blue-600);
+}
+.field.is-invalid input,
+.field.is-invalid textarea {
+  border-color: #c62828;
+}
+.field__err {
+  display: block;
+  font-size: var(--fs-small);
+  color: #c62828;
+  margin-top: 8px;
 }
 .form-note {
   font-size: var(--fs-small);
@@ -1052,6 +1086,17 @@ p:last-child {
 .footer a:not(.logo):hover {
   color: #fff;
 }
+.footer .ico {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  margin-right: 10px;
+  vertical-align: -3px;
+}
 .footer .logo {
   margin-bottom: 24px;
 }
@@ -1066,6 +1111,11 @@ p:last-child {
   gap: 16px;
   flex-wrap: wrap;
   font-size: 0.82rem;
+}
+.footer_end {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 /* ---------- Reveal ---------- */
@@ -1144,6 +1194,49 @@ p:last-child {
   }
   .hero {
     min-height: 88svh;
+  }
+  /* backdrop-filter makes the nav a containing block, trapping the fixed menu */
+  .nav:has(.menu.open) {
+    backdrop-filter: none;
+  }
+  .section {
+    padding: 56px 0;
+  }
+  .section--sm {
+    padding: 44px 0;
+  }
+  .section .wrap > [style*="margin-bottom"] {
+    margin-bottom: 28px !important;
+  }
+  .cols {
+    gap: 28px;
+  }
+  .col {
+    padding-top: 22px;
+  }
+  .col__no {
+    margin-bottom: 12px;
+  }
+  /* stacked splits: eyebrow + heading, then image, then copy */
+  .split:has(.split__media) {
+    row-gap: 0;
+  }
+  .split:has(.split__media) > div:not(.split__media) {
+    display: contents;
+  }
+  .split:has(.split__media) > div > .eyebrow,
+  .split:has(.split__media) > div > h2 {
+    order: -1;
+  }
+  .split:has(.split__media) > .split__media {
+    order: 0;
+    margin-bottom: 28px;
+  }
+  .split:has(.split__media) > div > :not(.eyebrow):not(h2) {
+    order: 1;
+  }
+  .split p:has(> .arrow) {
+    margin-top: 0.6em !important;
   }
 }
 @media (max-width: 640px) {

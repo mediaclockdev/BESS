@@ -40,6 +40,32 @@ if (reduce || !('IntersectionObserver' in window)) {
 document.querySelectorAll('[data-enquiry]').forEach(function (form) {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    var firstBad = null;
+    form.querySelectorAll('input, select, textarea').forEach(function (el) {
+      var field = el.closest('.field');
+      var err = field.querySelector('.field__err');
+      if (err) err.remove();
+      field.classList.remove('is-invalid');
+      el.removeAttribute('aria-invalid');
+      if (el.required && !el.value.trim()) el.value = '';
+      if (el.checkValidity()) return;
+      var v = el.validity;
+      var msg = v.valueMissing ? 'This field is required.'
+        : v.typeMismatch ? 'Enter a valid email address.'
+        : v.patternMismatch ? 'Enter a valid phone number.'
+        : v.tooShort ? 'Please enter at least ' + el.minLength + ' characters.'
+        : el.validationMessage;
+      err = document.createElement('span');
+      err.className = 'field__err';
+      err.id = el.id + '-err';
+      err.textContent = msg;
+      field.appendChild(err);
+      field.classList.add('is-invalid');
+      el.setAttribute('aria-invalid', 'true');
+      el.setAttribute('aria-describedby', err.id);
+      if (!firstBad) firstBad = el;
+    });
+    if (firstBad) { firstBad.focus(); return; }
     var note = form.querySelector('[data-result]');
     if (note) {
       note.textContent = 'Thank you — your enquiry has been received. Our team will respond within one business day.';
