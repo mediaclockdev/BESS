@@ -1182,6 +1182,11 @@ p:last-child {
   }
   .burger.open span {
     background: #fff;
+    height: 2px;
+  }
+  .burger.open {
+    border: 1px solid var(--blue-300);
+    border-radius: 50%;
   }
   .burger.open span:nth-child(1) {
     transform: translateY(6.5px) rotate(45deg);

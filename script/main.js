@@ -36,6 +36,14 @@ if (reduce || !('IntersectionObserver' in window)) {
   targets.forEach(function (el) { io.observe(el); });
 }
 
+// Phone fields: drop anything that isn't a digit, space, +, ( ) or -
+document.querySelectorAll('input[type="tel"]').forEach(function (el) {
+  el.addEventListener('input', function () {
+    var clean = el.value.replace(/[^0-9 +()\-]/g, '');
+    if (clean !== el.value) el.value = clean;
+  });
+});
+
 // Enquiry form — point this at your CRM / email endpoint
 document.querySelectorAll('[data-enquiry]').forEach(function (form) {
   form.addEventListener('submit', function (e) {
