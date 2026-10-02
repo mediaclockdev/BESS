@@ -1180,7 +1180,8 @@ p:last-child {
     position: relative;
     z-index: 95;
   }
-  .burger.open span {
+  .burger.open span,
+  .nav.is-solid .burger.open span {
     background: #fff;
     height: 2px;
   }
